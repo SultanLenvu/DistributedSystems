@@ -4,7 +4,7 @@ import psycopg2
 app = Flask(__name__)
 
 # Подключение к базе данных PostgreSQL
-conn = psycopg2.connect(dbname='your_database_name', user='your_username', password='your_password', host='localhost', port='5432')
+conn = psycopg2.connect(dbname='studydb', user='postgres', password='1995', host='localhost', port='5432')
 
 @app.route('/', methods=['POST'])
 def process_number():
