@@ -2,8 +2,8 @@
 
 ## Диаграмма компонентов
 
-![](img/components.drawio.png)
+![](img/component_diagram.png)
 
 ## Диаграмма последовательности
 
-![](img/sequence.drawio.png)
+![](img/sequence_diagram.png)
