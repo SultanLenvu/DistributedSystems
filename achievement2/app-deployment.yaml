@@ -14,11 +14,18 @@ spec:
         app: app
     spec:
       containers:
-        - name: app
-          image: sultanlenvu/node13_pyapp:v2
-          env:
-            - name: DATABASE_URL
-              value: postgresql://sultan:lenvu@postgres-service:5432/testbd
+        - name: app-container
+          image: sultanlenvu/node13_pyapp
           ports:
-            - containerPort: 80
-              name: app
+            - containerPort: 5000
+          env:
+            - name: DB_HOST
+              value: postgres
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_NAME
+              value: testdb
+            - name: DB_USER
+              value: sultan
+            - name: DB_PASSWORD
+              value: lenvu

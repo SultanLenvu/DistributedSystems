@@ -14,21 +14,14 @@ spec:
         app: postgres
     spec:
       containers:
-        - name: postgres
-          image: postgres:latest
+        - name: postgres-container
+          image: postgres
+          ports:
+            - containerPort: 5432
           env:
+            - name: POSTGRES_DB
+              value: testdb
             - name: POSTGRES_USER
               value: sultan
             - name: POSTGRES_PASSWORD
               value: lenvu
-            - name: POSTGRES_DB
-              value: testdb
-          ports:
-            - containerPort: 5432
-              name: postgres
-          volumeMounts:
-            - name: postgres-storage
-              mountPath: /var/lib/postgresql/data
-      volumes:
-        - name: postgres-storage
-          emptyDir: {}

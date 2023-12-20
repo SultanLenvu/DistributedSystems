@@ -1,0 +1,17 @@
+ apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sultan-ingress
+  namespace: ns-13
+spec:
+  rules:
+    - host: name-19.hse.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: app-service
+                port:
+                  number: 5000
