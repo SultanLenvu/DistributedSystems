@@ -20,7 +20,7 @@ spec:
             - containerPort: 5000
           env:
             - name: DB_HOST
-              value: postgres
+              value: postgres-service
             - name: DB_PORT
               value: "5432"
             - name: DB_NAME

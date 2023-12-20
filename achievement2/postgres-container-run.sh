@@ -4,5 +4,5 @@ docker run -d -p 5000:5000 --name app-container --link postgres-container sultan
 
 curl -X POST name-13.hse.ru:30080/ -H "Content-Type: application/json" -d '{ "number": 1 }'
 
-curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' name-19.hse.ru:30080
+curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' name-13.hse.ru:30080
 
